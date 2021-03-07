@@ -55,6 +55,7 @@ lazy val zhttpBenchmarks = (project in file("./zio-http-benchmarks"))
 lazy val example = (project in file("./example"))
   .settings(
     fork := true,
+    mainClass in (Compile, run) := Option("HelloWorldAdvanced"),
   )
   .dependsOn(zhttp)
 
