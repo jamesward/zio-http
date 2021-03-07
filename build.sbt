@@ -53,6 +53,9 @@ lazy val zhttpBenchmarks = (project in file("./zio-http-benchmarks"))
   )
 
 lazy val example = (project in file("./example"))
+  .settings(
+    fork := true,
+  )
   .dependsOn(zhttp)
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
