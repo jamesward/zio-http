@@ -65,7 +65,7 @@ object BuildHelper extends ScalaSettings {
   def stdSettings(prjName: String) = Seq(
     name                                   := s"$prjName",
     ThisBuild / crossScalaVersions         := Seq(Scala212, Scala213, ScalaDotty),
-    ThisBuild / scalaVersion               := Scala213,
+    ThisBuild / scalaVersion               := ScalaDotty,
     scalacOptions                          := stdOptions ++ extraOptions(scalaVersion.value),
     semanticdbVersion                      := scalafixSemanticdb.revision, // use Scalafix compatible version
     ThisBuild / scalafixScalaBinaryVersion := CrossVersion.binaryScalaVersion(scalaVersion.value),
